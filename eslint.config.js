@@ -1,6 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc";
 import eslintPlugin from "@typescript-eslint/eslint-plugin";
 import eslintParser from "@typescript-eslint/parser";
+import importPlugin from "eslint-plugin-import";
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.url,
@@ -22,6 +23,7 @@ export default [
     },
     plugins: {
       "@typescript-eslint": eslintPlugin,
+      import: importPlugin,
     },
     rules: {
       "@typescript-eslint/interface-name-prefix": "off",
@@ -44,7 +46,6 @@ export default [
       "keyword-spacing": ["error", { before: true, after: true }],
       "space-before-blocks": ["error", "always"],
     },
-
     ignores: [".eslintrc.js", "jest.config.js"],
   },
   {
