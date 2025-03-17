@@ -2,6 +2,15 @@
   "name": "@mykyta-isai/eslint-config",
   "version": "0.0.1",
   "type": "module",
+  "description": "My shared ESLint configuration",
+  "main": "./eslint.config.js",
+  "keywords": ["eslint", "eslint-config", "typescript", "eslint-plugin", "prettier"],
+  "author": "Mykyta Isai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isai-mykyta/eslint-config"
+  },
   "exports": {
     "default": "./eslint.config.js"
   },
