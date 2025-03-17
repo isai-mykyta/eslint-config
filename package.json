@@ -1,6 +1,6 @@
 {
   "name": "@mykyta-isai/eslint-config",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "My shared ESLint configuration",
   "main": "./eslint.config.js",
