@@ -10,7 +10,7 @@ export default [
       parserOptions: {
         project: "./tsconfig.json",
         sourceType: "module",
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: process.cwd(),
       },
     },
     plugins: {
