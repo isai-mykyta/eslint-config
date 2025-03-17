@@ -1,6 +1,6 @@
 {
   "name": "@mykyta-isai/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "description": "My shared ESLint configuration",
   "main": "./eslint.config.js",
@@ -17,8 +17,6 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
-    "eslint": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.3"
+    "eslint": "^9.22.0"
   }
 }
