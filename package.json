@@ -1,6 +1,6 @@
 {
-  "name": "eslint-config",
-  "version": "1.0.0",
+  "name": "@mykyta-isai/eslint-config",
+  "version": "0.0.1",
   "type": "module",
   "exports": {
     "default": "./eslint.config.js"
