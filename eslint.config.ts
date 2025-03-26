@@ -2,8 +2,16 @@ import { FlatCompat } from "@eslint/eslintrc";
 import eslintPlugin from "@typescript-eslint/eslint-plugin";
 import eslintParser from "@typescript-eslint/parser";
 
+function getBaseDirectory() {
+  try {
+    return new URL(import.meta.url).pathname;
+  } catch {
+    return __dirname;
+  }
+}
+
 const compat = new FlatCompat({
-  baseDirectory: import.meta.url,
+  baseDirectory: getBaseDirectory(),
 });
 
 export default [

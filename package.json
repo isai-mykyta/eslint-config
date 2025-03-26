@@ -1,9 +1,12 @@
 {
   "name": "@mykyta-isai/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "type": "module",
   "description": "My shared ESLint configuration",
-  "main": "./eslint.config.js",
+  "main": "./dist/eslint.config.cjs",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "eslint",
     "eslint-config",
@@ -11,6 +14,9 @@
     "eslint-plugin",
     "prettier"
   ],
+  "scripts": {
+    "build": "tsup"
+  },
   "author": "Mykyta Isai",
   "license": "MIT",
   "repository": {
@@ -18,14 +24,21 @@
     "url": "https://github.com/isai-mykyta/eslint-config"
   },
   "exports": {
-    "default": "./eslint.config.js"
+    "import": "./dist/eslint.config.js",
+    "require": "./dist/eslint.config.cjs"
   },
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
+    "@types/node": "^22.13.13",
     "@typescript-eslint/eslint-plugin": "^8.26.1",
     "@typescript-eslint/parser": "^8.26.1",
     "eslint": "^9.22.0",
     "eslint-plugin-import": "^2.31.0",
+    "jiti": "^2.4.2",
+    "tsup": "^8.4.0",
     "typescript": "^5.8.2"
   }
 }

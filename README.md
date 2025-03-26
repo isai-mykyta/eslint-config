@@ -17,10 +17,39 @@ yarn add --dev @mykyta-isai/eslint-config eslint @typescript-eslint/eslint-plugi
 ```
 
 🛠️ Usage
-To enable this ESLint configuration in your project, create an eslint.config.js file in the root of your project and extend the configuration from this package:
+To enable this ESLint configuration in your project, create an eslint.config.js file in the root of your project and extend the config from this package.
+
+✅ ESM Projects
+If your project uses "type": "module" in package.json, use this:
 
 ```bash
+// eslint.config.js
 import eslintConfig from "@mykyta-isai/eslint-config";
 
 export default eslintConfig;
+```
+
+✅ CommonJS Projects
+If your project uses the default CommonJS format (no "type": "module" in package.json), use this instead:
+
+```bash
+// eslint.config.js
+const eslintConfig = require("@mykyta-isai/eslint-config");
+
+module.exports = eslintConfig.default;
+```
+
+## 🧪 Example Lint Script
+You can add this to your package.json:
+
+```json
+"scripts": {
+  "lint": "eslint . --ext .ts"
+}
+```
+
+Then run:
+
+```bash
+yarn lint
 ```
